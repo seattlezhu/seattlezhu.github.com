@@ -475,8 +475,9 @@ article .entry .pullquote {
 }
 article footer {
   margin-top: 3em;
-  margin-bottom: 5.5em;
+  margin-bottom: 3em;
   padding-top: 10px;
+  padding-bottom: 10px;
   color: #999;
   font-size: 0.9em;
   line-height: 16px;
@@ -526,22 +527,13 @@ article footer .before-tags a:before {
   top: 2px;
   left: 1px;
 }
-article footer .tags {
-  max-width: 400px;
-  margin: 0 auto 5em;
-  text-align: center;
+article footer .tags:before {
+  content: '\f02c';
+  top: 2px;
+  left: 1px;
 }
-article footer .tags a {
-  display: inline-block;
-  padding: 0.2em 0.65em;
-  font-size: 1.2em;
-  -webkit-border-radius: 16px;
-  border-radius: 16px;
-  color: #ddd;
-}
-article footer .tags a:hover {
-  background: #f3f3f1;
-  color: #999;
+article footer a:hover {
+  color: #258fb8;
 }
 article footer .addthis {
   max-width: 400px;
