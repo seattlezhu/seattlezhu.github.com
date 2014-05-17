@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>善用佳软 | Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="group-text">
+	<nav id="main-nav">
+	  <ul>
+	    
+	      <li><a href="/">Home</a></li>
+	    
+	      <li><a href="/archives">Archives</a></li>
+	    
+	  </ul>
+	  <div class="clearfix"></div>
+	</nav>
+	<div class="main-header">
+	  <h1><a href="/">Hexo</a></h1>
+	  <h2><a href="/"></a></h2>
+	</div>
+	<div class="clearfix"></div>
+</div></header>
+  <div id="content" class="inner">
+    <div id="main-col"><div id="wrapper">
+
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2013-08-10T06:59:49.000Z"><a href="/2013/08/10/use-shortcut-combination-everything-autohotkey-small-mind/">Aug 10 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/08/10/use-shortcut-combination-everything-autohotkey-small-mind/">快捷组合Everything+AutoHotkey使用小记</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>继上次看的善用佳软在中科大的报告，除了主要的TC介绍外，还额外介绍了几个提高效率的软件，其中就有Everything和AutoHotkey。</p>
+<p>Everything设置相对简单，请参看善用佳软的详细介绍“<span style="text-decoration: underline;">Everything:速度最快的文件名搜索工具</span>”。除了首次打开时，略显卡顿之外（项目工程文件超多，复制任何一个工程都在小时级别，见谅！），之后再打开都是所见所得，速度嗖嗖的。当然安装中文包，看的会顺眼点。</p>
+<p>重点说下AutoHotkey，先看善用佳软的介绍“<span style="text-decoration: underline;">AutoHotkey 0级入门教程:让重复工作一键完成</span>”。安装完成后运行AutoHotkey.exe（还有AutoHotkeyA32.exe和AutoHotkeyU32.exe），右键选择Edit This Script，打开一个名叫AutoHotkey.ahk的文件（是否想到此时可以用Everything搜索到这个文件，此文件在我的文档目录下）。简单翻译下里面的注释：</p>
+<p>这个script（指AutoHotkey.ahk）的文件名和路径都是特殊的，因为当你直接启动程序时，会自动加载这个文件。同样任何以.ahk结尾的文本文件都可以通过双击来加载。你可以在任意目录下创建任意多的.ahk文件。你也可以同时运行多个.ahk文件，每个文件都会有各自的托盘图标。可以理解为，将自己定义的快捷键方式放在该文件的后面，因为每次启动AHK都会加载该文件，而不选择重新新建一个，每次都双击去打开运行，当然测试阶段可能那样更方便。好，说重点：组合键快速打开Everything，比如Win+a,要求当Everything已处于激活状态（指在最上层），最小化Everything窗口；当Everything最小化或者在后台或者根本没启动时，打开并激活。根据这个要求，找了N多博文，甚至Google，仍没得到有效解决，最后只能硬着头皮看AHK英文帮助文档，发现不过几分钟就理解并实现了（不是炫耀，英文帮助文档内容全面，且思路清晰，只要耐心点很快就能找到想要的）。
+      
+    </div>
+    <footer>
+      
+        
+          <div class="aligncenter">
+            <a href="/2013/08/10/use-shortcut-combination-everything-autohotkey-small-mind/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div id="footer-wrapper">
+    <footer id="footer" class="inner">
+<div class="aligncenter">
+	<a href="https://github.com/cinvro/hexo-theme-perry">Perry</a> by <a href="http://cinvro.com">cinvro </a>
+</div>
+
+<div class="aligncenter">
+  
+  &copy; 2014 John Doe
+  
+</div>
+
+<div class="clearfix"></div></footer>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+  </div>
+</body>
+</html>
