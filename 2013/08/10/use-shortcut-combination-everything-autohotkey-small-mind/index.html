@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   
-  <title>快捷组合Everything+AutoHotkey使用小记 | Hexo</title>
-  <meta name="author" content="John Doe">
+  <title>快捷组合Everything+AutoHotkey使用小记 | SeattleZhu</title>
+  <meta name="author" content="seattlezhu">
   
   <meta name="description" content="继上次看的善用佳软在中科大的报告，除了主要的TC介绍外，还额外介绍了几个提高效率的软件，其中就有Everything和AutoHotkey。
 Everything设置相对简单，请参看善用佳软的详细介绍“Everything:速度最快的文件名搜索工具”。除了首次打开时，略显卡顿之外（项目工程文件超多，复制任何一个工程都在小时级别，见谅！），之后再打开都是所见所得，速度嗖嗖的。当然安装中文包，看的会顺眼点。
@@ -15,14 +15,14 @@ Everything设置相对简单，请参看善用佳软的详细介绍“Everything
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="快捷组合Everything+AutoHotkey使用小记"/>
-  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:site_name" content="SeattleZhu"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="SeattleZhu" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -43,8 +43,8 @@ Everything设置相对简单，请参看善用佳软的详细介绍“Everything
 	  <div class="clearfix"></div>
 	</nav>
 	<div class="main-header">
-	  <h1><a href="/">Hexo</a></h1>
-	  <h2><a href="/"></a></h2>
+	  <h1><a href="/">SeattleZhu</a><h1>
+	  <h2><a href="/">一个爱摄影的程序员在骑自行车</a></h2>
 	</div>
 	<div class="clearfix"></div>
 </div></header>
@@ -66,7 +66,7 @@ Everything设置相对简单，请参看善用佳软的详细介绍“Everything
   <div class="post-content">
     <header>
       
-        <time datetime="2013-08-10T06:59:49.000Z"><a href="/2013/08/10/use-shortcut-combination-everything-autohotkey-small-mind/">Aug 10 2013</a></time>
+        <time datetime="2013-08-10T06:59:49.000Z"><a href="/2013/08/10/use-shortcut-combination-everything-autohotkey-small-mind/">8月 10 2013</a></time>
       
       
   
@@ -83,12 +83,8 @@ Everything设置相对简单，请参看善用佳软的详细介绍“Everything
 <p><pre>; ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br>; Hotkeys for SeattleZhu at 20130716</p>
 <p>Activate(p)<br>{<br>  IfWinActive, ahk_exe %p%<br>  {<br>    WinMinimize<br>    return<br>  }<br>  IfWinExist, ahk_exe %p%<br>  {<br>    WinShow<br>    WinActivate<br>    return 1<br>  }<br>  return 0<br>}</p>
 <p>ActivateAndOpen(t,p)<br>{<br>  if Activate(p)==0<br>  {<br>    Run %p%<br>    WinActivate<br>    return<br>  }<br>}</p>
-<p>; Program in common use</p>
-<h1 id="a::ActivateAndOpen(“Everything”,”D:\MyProgram\Everything\Everything-exe”)">a::ActivateAndOpen(“Everything”,”D:\MyProgram\Everything\Everything.exe”)</h1>
-<h1 id="c::Run_cmd-exe">c::Run cmd.exe</h1>
-<p>; Common Website </p>
-<h1 id="g::Run_https://www-google-com/">g::Run <a href="https://www.google.com/" target="_blank">https://www.google.com/</a></h1>
-<h1 id="b::Run_www-baidu-com">b::Run www.baidu.com</h1>
+<p>; Program in common use<br>#a::ActivateAndOpen(“Everything”,”D:\MyProgram\Everything\Everything.exe”)<br>#c::Run cmd.exe</p>
+<p>; Common Website<br>#g::Run <a href="https://www.google.com/" target="_blank">https://www.google.com/</a><br>#b::Run www.baidu.com</p>
 <p>; Common file-parth<br>!b::Run E:\百度云<br>; ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</pre><br>注：这段代码是结合了“<span style="text-decoration: underline;">AutoHotkey+Everything提升工作效率</span>”一文所示代码，直接使用发现总是不如意，看帮助文档后发现关键问题出在WinTitle上，原代码是用Title来确认是否已激活或打开程序，而程序Title一直没找到（囧），但文档提示AHK[v1.1.01+]版本支持ahk_exe方式确认，既然Run命令要用到exe文件路径，索性合并在一起岂不是方便，于是就有了新代码。</p>
 <blockquote>
 <p>小贴士 – 系统默认的 Win 快捷键：<br>Win + E：打开资源管理器；<br>Win + D：显示桌面；<br>Win + F：打开查找对话框；<br>Win + R：打开运行对话框；<br>Win + L：锁定电脑；<br>Win + PauseBreak：打开系统属性对话框；</p>
@@ -120,6 +116,25 @@ Everything设置相对简单，请参看善用佳软的详细介绍“Everything
   </div>
 </article>
 
+
+<section id="comment">
+<!-- ��˵���ۿ� start -->
+	<div class="ds-thread" data-thread-key="�뽫�˴��滻������������վ���е�ID" data-title="���滻�����µı���" data-url="���滻�����µ���ַ"></div>
+<!-- ��˵���ۿ� end -->
+<!-- ��˵����JS���� start (һ����ҳֻ������һ��) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"seattlezhu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- ��˵����JS���� end -->
+</section>
 </div></div>
     <div class="clearfix"></div>
   </div>
@@ -132,7 +147,7 @@ Everything设置相对简单，请参看善用佳软的详细介绍“Everything
 
 <div class="aligncenter">
   
-  &copy; 2014 John Doe
+  &copy; 2014 seattlezhu
   
 </div>
 
