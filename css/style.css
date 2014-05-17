@@ -116,7 +116,7 @@ a {
 }
 #header h1 {
   font-weight: normal;
-  font-size: 8em;
+  font-size: 2em;
 }
 @media screen and (max-width: 480px) {
   #header h1 {
@@ -344,9 +344,9 @@ article .entry blockquote {
   border-bottom: 1px solid #ddd;
   font-style: italic;
   font-family: "Georgia", serif;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 0 30px 15px;
-  text-align: center;
+  text-align: left;
 }
 article .entry blockquote footer {
   border-top: none;
@@ -375,13 +375,16 @@ article .entry code {
   border-radius: 3px;
 }
 article .entry pre {
-  background: #eee;
+  background: #f9f9f9;
   border: 1px solid #ddd;
   margin-top: 15px;
   overflow: auto;
   padding: 7px 15px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  font-size: 0.8em;
+  border-color: #ccc #ccc #ccc #111930;
+  border-width: 1px 1px 1px 4px;
+  -webkit-border-radius: 5px 2px 2px 5px;
+  border-radius: 5px 2px 2px 5px;
 }
 article .entry pre code {
   background: none;
